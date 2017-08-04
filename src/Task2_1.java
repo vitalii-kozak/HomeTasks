@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringJoiner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,12 +23,12 @@ public class Task2_1 {
 
     }
 
-    public static String textToFirstUpper(String text){
+    public static String textToFirstUpper(String text) {
         Pattern p = Pattern.compile("\\b");
         Matcher m = p.matcher(text);
         StringBuilder sb = new StringBuilder();
         int index = 0;
-        while(m.find()){
+        while (m.find()) {
             String val = text.substring(index, m.start());
             index = m.start();
             sb.append(firstUpperCase(val));
@@ -36,19 +37,28 @@ public class Task2_1 {
         return sb.toString();
     }
 
-    public static String firstUpperCase(String word){
-        if(word == null || word.isEmpty()) return "";
+    public static String firstUpperCase(String word) {
+        if (word == null || word.isEmpty()) return "";
         return word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
     private static String readText() {
+        StringJoiner joiner = new StringJoiner("\n");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            String line = reader.readLine();
-            return line;
-        } catch (IOException e) {
-            e.printStackTrace();
+        String line = "";
+        System.out.println("Enter the string line. Type stop for exit");
+
+        do {
+            try {
+                line = reader.readLine();
+                joiner.add(line);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
-        return " ";
+        while (!line.toLowerCase().equals("stop"));
+
+        return joiner.toString();
     }
 }
