@@ -1,6 +1,6 @@
-package Task1_3_Bus.Database;
+package task1_3_bus.Database;
 
-import Task1_3_Bus.Entity.Driver;
+import task1_3_bus.Entity.Driver;
 
 public class Database {
 

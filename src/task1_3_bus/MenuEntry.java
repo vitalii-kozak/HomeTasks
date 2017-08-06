@@ -1,10 +1,10 @@
-package Task1_3_Bus;
+package task1_3_bus;
 
-import Task1_3_Bus.Database.Buses;
-import Task1_3_Bus.Entity.Bus;
-import Task1_3_Bus.Entity.Driver;
-import Task1_3_Bus.Query.QueryList;
-import Task1_3_Bus.View.BusesSort;
+import task1_3_bus.Database.Buses;
+import task1_3_bus.Entity.Bus;
+import task1_3_bus.Entity.Driver;
+import task1_3_bus.Query.QueryList;
+import task1_3_bus.View.BusesSort;
 
 import java.io.BufferedReader;
 import java.io.IOException;

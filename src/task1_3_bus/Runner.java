@@ -1,6 +1,6 @@
-package Task1_3_Bus;
+package task1_3_bus;
 
-import Task1_3_Bus.Database.Buses;
+import task1_3_bus.Database.Buses;
 
 public class Runner {
     public static void main(String[] args) {

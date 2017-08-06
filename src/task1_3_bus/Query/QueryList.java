@@ -1,8 +1,8 @@
-package Task1_3_Bus.Query;
+package task1_3_bus.Query;
 
 
 
-import Task1_3_Bus.Database.Buses;
+import task1_3_bus.Database.Buses;
 
 import java.util.StringJoiner;
 

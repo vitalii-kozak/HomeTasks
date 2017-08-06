@@ -1,4 +1,4 @@
-package Task1_3_Bus.Entity;
+package task1_3_bus.Entity;
 
 public class Bus {
     private Driver driver;

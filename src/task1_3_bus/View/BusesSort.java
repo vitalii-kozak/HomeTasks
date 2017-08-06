@@ -1,6 +1,6 @@
-package Task1_3_Bus.View;
+package task1_3_bus.View;
 
-import Task1_3_Bus.Entity.Bus;
+import task1_3_bus.Entity.Bus;
 
 import java.util.Arrays;
 

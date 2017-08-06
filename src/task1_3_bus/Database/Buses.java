@@ -1,7 +1,7 @@
-package Task1_3_Bus.Database;
+package task1_3_bus.Database;
 
-import Task1_3_Bus.Entity.Bus;
-import Task1_3_Bus.Entity.Driver;
+import task1_3_bus.Entity.Bus;
+import task1_3_bus.Entity.Driver;
 
 import java.util.StringJoiner;
 
