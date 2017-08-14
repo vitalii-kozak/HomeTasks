@@ -23,6 +23,8 @@ public class CalendarStore {
         try (ObjectInputStream file = new ObjectInputStream(
                 new FileInputStream(fileName))) {
             days = (Calendar) file.readObject();
+        } catch (FileNotFoundException e) {
+            System.out.println("Sorry, file not found: " + e.getMessage());
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
