@@ -1,10 +1,12 @@
 package task3_1.Menu;
 
+import task3_1.Data.Calendar;
+import task3_1.Tools.CalendarStore;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 abstract class MenuEntry {
@@ -35,34 +37,48 @@ public class Menu {
     public Menu(Calendar days) {
 
 
-        entries.add(new MenuEntry("Create points") {
+        entries.add(new MenuEntry("Fill the days") {
             @Override
             public void run() {
-                System.out.println("Create points");
+                System.out.println("Fill the days");
+                days.fillTheCalendar();
+            }
+        });
+
+        entries.add(new MenuEntry("Print all holidays") {
+            @Override
+            public void run() {
+                System.out.println("Print all holidays");
+                System.out.println(days.findAllHolidays());
+            }
+        });
+
+        entries.add(new MenuEntry("Print all church holidays") {
+            @Override
+            public void run() {
+                System.out.println("church holidays are ");
+                System.out.println(days.findAllChurchHolidays());
+            }
+        });
+
+        entries.add(new MenuEntry("Export to file") {
+            @Override
+            public void run() {
+                System.out.println("Export to file");
+                if (CalendarStore.exportToFile("Calendar.ser", days)){
+                    System.out.println("Success");
+                }else{
+                    System.out.println("Fail");
+                }
 
             }
         });
 
-        entries.add(new MenuEntry("Print all points") {
+        entries.add(new MenuEntry("Import from file") {
             @Override
             public void run() {
-                System.out.println("Print all points");
-
-            }
-        });
-
-        entries.add(new MenuEntry("Find the farther point") {
-            @Override
-            public void run() {
-                System.out.println("The farther point is ");
-
-            }
-        });
-
-        entries.add(new MenuEntry("Find the immediate point") {
-            @Override
-            public void run() {
-                System.out.println("The immediate point is ");
+                System.out.println("Import from file");
+                System.out.println(CalendarStore.importFromFile("Calendar.ser"));
 
             }
         });
