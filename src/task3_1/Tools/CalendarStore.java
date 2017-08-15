@@ -17,12 +17,12 @@ public class CalendarStore {
         }
     }
 
-    public static Calendar importFromFile(String fileName) {
+    public static <E>E importFromFile(String fileName) {
 
-        Calendar days = null;
+        E days = null;
         try (ObjectInputStream file = new ObjectInputStream(
                 new FileInputStream(fileName))) {
-            days = (Calendar) file.readObject();
+            days = (E) file.readObject();
         } catch (FileNotFoundException e) {
             System.out.println("Sorry, file not found: " + e.getMessage());
         } catch (IOException e) {

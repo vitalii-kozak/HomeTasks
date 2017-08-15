@@ -78,7 +78,7 @@ public class Menu {
             @Override
             public void run() {
                 System.out.println("Import from file");
-                System.out.println(CalendarStore.importFromFile("Calendar.ser"));
+                System.out.println((Calendar)CalendarStore.importFromFile("Calendar.ser"));
 
             }
         });
