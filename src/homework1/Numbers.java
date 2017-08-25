@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//1.1. Напишите консольное приложение, которое определяет целое
+//        положительное число в десятичной системе, затем преобразует и выводит его
+//        в двоичной/восьмиричной/шестнадцатиричной системах счисления.
+
 public class Numbers {
     public static void main(String[] args) {
         int number;
